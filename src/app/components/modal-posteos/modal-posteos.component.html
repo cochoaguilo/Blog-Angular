@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Titulo:{{data.title}}</h1>
+<div mat-dialog-content>
+    <h3>UserId: {{data.userId}}</h3>
+  <p>Body: {{data.body}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="navigateTo(['usuarios', data.userId])">Detalle Usuario</button>
+  <button mat-raised-button (click)="navigateTo(['posteos', data.id, 'comentarios'])">Comentarios</button>
+  <button mat-raised-button (click)="navigateTo(['todos', data.userId])">TODOs</button>
+  <button mat-raised-button (click)="onNoClick()">Close</button>
+  
+</div>

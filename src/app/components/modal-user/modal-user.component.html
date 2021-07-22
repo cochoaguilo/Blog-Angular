@@ -1,0 +1,16 @@
+
+
+
+  <h1 mat-dialog-title>Nombre:{{data.name}}</h1>
+<div mat-dialog-content>
+  <h2>Sitio Web:{{data.website}}</h2>
+  <h3>Empresa: {{data.company.name}}</h3>
+  <h3>Dirección: {{data.address.city}}, {{data.address.street}}, {{data.address.suite}}</h3>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="navigateTo(['usuarios', data.id, 'posteos'])">Posteos</button>
+  <button mat-button (click)="navigateTo(['usuarios', data.id, 'albumes'])">Albumes</button>
+  <button mat-button >TODOs</button>
+  <button mat-button (click)="onNoClick()">Close</button>
+  
+</div>

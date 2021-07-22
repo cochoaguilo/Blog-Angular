@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Titulo:{{data.title}}</h1>
+<div mat-dialog-content>
+    <h3>UserId: {{data.userId}}</h3>
+  <p>Id: {{data.id}}</p>
+</div>
+<div mat-dialog-actions>
+  <a mat-button (click)="navigateTo(['usuarios', data.userId])">Detalle Usuario</a>
+  <a mat-button (click)="navigateTo(['albumes', data.id, 'fotos'])" >Fotos</a>
+  <button mat-button (click)="onNoClick()">Close</button>
+  
+</div>
