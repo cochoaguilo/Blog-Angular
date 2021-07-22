@@ -18,13 +18,9 @@ export class AlbumComponent {
   
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(ModalAlbumesComponent, {
-      width: '250px',
+    this.dialog.open(ModalAlbumesComponent, {
+      width: '70%',
       data: this.album
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
     });
   }
 

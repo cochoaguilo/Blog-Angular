@@ -15,7 +15,6 @@ export class AlbumesComponent implements OnInit {
 
   getData(): void{
    this.userService.getData('/albums').subscribe(data=>{
-     console.log(data)
      this.dataAlbumes = data
    })
   } 

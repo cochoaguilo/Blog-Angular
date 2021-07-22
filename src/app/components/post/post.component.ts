@@ -18,13 +18,10 @@ export class PostComponent {
   
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(ModalPosteosComponent, {
-      width: '250px',
+    this.dialog.open(ModalPosteosComponent, {
+      width: '70%',
       data: this.post
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
   }
 }

@@ -12,6 +12,8 @@ import { MatDialogModule} from '@angular/material/dialog';
 import { ComentariosComponent } from './comentarios/comentarios.component'
 import { SharedModule } from '../shared.module';
 import { MatButtonModule } from '@angular/material/button';
+import { FilterPipe } from 'src/app/pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -30,7 +32,8 @@ const routes: Routes = [
     PostComponent, 
     ModalPosteosComponent, 
     ComentariosComponent,
-    ComentarioComponent
+    ComentarioComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
@@ -39,7 +42,8 @@ const routes: Routes = [
     MatListModule,
     MatDialogModule,
     MatButtonModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   exports: [
     RouterModule

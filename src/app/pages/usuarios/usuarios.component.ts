@@ -17,7 +17,6 @@ export class UsuariosComponent implements OnInit {
 
    getData(): void{
     this.userService.getData('/users').subscribe(data=>{
-      console.log(data)
       this.dataUsers = data
     })
    } 

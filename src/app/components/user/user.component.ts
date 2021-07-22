@@ -19,13 +19,9 @@ export class UserComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(ModalUserComponent, {
+    this.dialog.open(ModalUserComponent, {
       width: '250px',
       data: this.user
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
     });
   }
 }

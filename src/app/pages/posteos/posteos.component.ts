@@ -13,18 +13,19 @@ export class PosteosComponent implements OnInit {
   constructor(private userService: HttpClientService, ) {
    
   }
-
+  filterPost:any = ''
   getData(): void{
    this.userService.getData('/posts').subscribe(data=>{
-     console.log(data)
      this.dataPosteos = data
    })
   } 
 
  ngOnInit(): void {
    this.getData()
- 
-   
+ }
+
+ onKeyup(filterValue:string){
+   this.dataPosteos.filter = filterValue.trim().toLowerCase();
  }
 
 }

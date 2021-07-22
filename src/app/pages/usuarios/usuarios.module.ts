@@ -6,6 +6,9 @@ import { ModalUserComponent } from '../../components/modal-user/modal-user.compo
 
 import { UsuariosComponent } from './usuarios.component';
 import { PostesbyusersComponent} from '../../components/postesbyusers/postesbyusers.component'
+
+import {TodoComponent} from '../../components/todo/todo.component'
+import { ModalTodoComponent } from '../../components/modal-todo/modal-todo.component'
 //Material Ui
 import {MatListModule} from '@angular/material/list'
 import { MatDialogModule} from '@angular/material/dialog';
@@ -13,7 +16,8 @@ import { UsuarioByAlbumComponent } from './usuario-by-album/usuario-by-album.com
 
 //import shared modules
 import { SharedModule } from '../shared.module';
-import { UserbyidComponent } from './userbyid/userbyid.component'
+import { UserbyidComponent } from './userbyid/userbyid.component';
+import { TodosComponent } from './todos/todos.component'
 
 
 const routes: Routes = [
@@ -32,12 +36,17 @@ const routes: Routes = [
   {
     path: ':id/albumes',
     component: UsuarioByAlbumComponent
+  },
+  {
+    path: ':id/todos',
+    component: TodosComponent
   }
 ];
 
 @NgModule({
   entryComponents: [
-    ModalUserComponent
+    ModalUserComponent,
+    ModalTodoComponent
   ],
   declarations: [
     UsuariosComponent,
@@ -46,7 +55,9 @@ const routes: Routes = [
     ModalUserComponent,
     UsuarioByAlbumComponent,
     UserbyidComponent,
-    
+    TodoComponent,
+    TodosComponent,
+    ModalTodoComponent
   ],
   imports: [
     CommonModule,

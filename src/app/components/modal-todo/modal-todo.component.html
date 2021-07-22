@@ -1,0 +1,7 @@
+<h4 mat-dialog-title>Titulo:{{data.title}}</h4>
+<div mat-dialog-content>
+   <p>User Id: {{data.userId}}</p>
+   <p>Id: {{data.id}}</p>
+   <p *ngIf ="data.completed; else elseBlock">Estado: Completado</p>
+   <ng-template #elseBlock>Estado: No completado</ng-template>
+</div>
