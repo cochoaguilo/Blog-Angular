@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import {UserComponent} from '../../components/user/user.component'
 import { ModalUserComponent } from '../../components/modal-user/modal-user.component'
 
 import { UsuariosComponent } from './usuarios.component';
 import { PostesbyusersComponent} from '../../components/postesbyusers/postesbyusers.component'
 
-import {TodoComponent} from '../../components/todo/todo.component'
-import { ModalTodoComponent } from '../../components/modal-todo/modal-todo.component'
-//Material Ui
-import {MatListModule} from '@angular/material/list'
-import { MatDialogModule} from '@angular/material/dialog';
 import { UsuarioByAlbumComponent } from './usuario-by-album/usuario-by-album.component'
 
 //import shared modules
 import { SharedModule } from '../shared.module';
+
+
 import { UserbyidComponent } from './userbyid/userbyid.component';
-import { TodosComponent } from './todos/todos.component'
+import { TodosByUserComponent } from './todosbyuser/todosbyuser.component';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -39,14 +36,13 @@ const routes: Routes = [
   },
   {
     path: ':id/todos',
-    component: TodosComponent
+    component: TodosByUserComponent
   }
 ];
 
 @NgModule({
   entryComponents: [
     ModalUserComponent,
-    ModalTodoComponent
   ],
   declarations: [
     UsuariosComponent,
@@ -55,16 +51,12 @@ const routes: Routes = [
     ModalUserComponent,
     UsuarioByAlbumComponent,
     UserbyidComponent,
-    TodoComponent,
-    TodosComponent,
-    ModalTodoComponent
+    TodosByUserComponent
   ],
   imports: [
-    CommonModule,
     SharedModule,
     RouterModule.forChild(routes),
-    MatListModule,
-    MatDialogModule
+    FormsModule
   ],
   exports: [
     RouterModule

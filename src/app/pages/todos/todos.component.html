@@ -1,0 +1,6 @@
+<div class="container-sm">
+    <input type="number" name="filterById" id="filterById" [(ngModel)]="filterById">
+<mat-list *ngFor="let todo of dataTodos | filterById: filterById">
+    <app-todo [todo]="todo"></app-todo>
+</mat-list>
+</div>

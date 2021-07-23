@@ -3,13 +3,15 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClientService } from 'src/app/service/http-client.service';
 
 @Component({
-  selector: 'app-todos',
-  templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.css']
+  selector: 'app-todosbyuser',
+  templateUrl: './todosbyuser.component.html',
+  styleUrls: ['./todosbyuser.component.css']
 })
-export class TodosComponent implements OnInit {
+export class TodosByUserComponent implements OnInit {
 
   dataTodo: any = []
+
+  filterById: any = ''
 
   constructor(private userService: HttpClientService, private routeActivated: ActivatedRoute) {
    
