@@ -1,0 +1,12 @@
+.userbyid{
+    position: relative;
+    height: 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: thick solid;
+    padding: 5%;
+}
+
+.dato-empresa{
+    font-size: 24px;
+}

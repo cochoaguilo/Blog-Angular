@@ -1,3 +1,5 @@
-<mat-list class="container" *ngFor="let comentario of dataComentarios">
+<div class="container" style="margin-bottom: 10%; margin-top: 5%;">
+<mat-list  *ngFor="let comentario of dataComentarios">
     <app-comentario [comentario]='comentario'></app-comentario>
 </mat-list>
+</div>

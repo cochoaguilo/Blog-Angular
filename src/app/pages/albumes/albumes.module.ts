@@ -7,6 +7,10 @@ import { FotosComponent } from './fotos/fotos.component';
 //Material Ui
 import {MatCardModule} from '@angular/material/card';
 import { SharedModule } from '../shared.module';
+import { CardComponent } from 'src/app/components/card/card.component';
+
+//scroll
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 const routes: Routes = [
@@ -25,13 +29,15 @@ const routes: Routes = [
   declarations: [
     AlbumesComponent,
     FotosComponent,
-    ModalAlbumesComponent
+    ModalAlbumesComponent,
+    CardComponent
   ],
   imports: [
     RouterModule,
     RouterModule.forChild(routes),
     MatCardModule,
-    SharedModule
+    SharedModule,
+    InfiniteScrollModule
   ],
   exports: [
     RouterModule

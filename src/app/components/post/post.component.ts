@@ -20,6 +20,7 @@ export class PostComponent {
   openDialog(): void {
     this.dialog.open(ModalPosteosComponent, {
       width: '70%',
+      height: '500px',
       data: this.post
     });
 

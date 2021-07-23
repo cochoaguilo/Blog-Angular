@@ -8,11 +8,14 @@ import {HttpClient} from '@angular/common/http'
 export class HttpClientService {
 
   constructor(private http:HttpClient) { }
-
+  url = 'https://jsonplaceholder.typicode.com'
   
   getData(path: string){
-    let url = 'https://jsonplaceholder.typicode.com'
+  
     
-    return this.http.get(url+path)
+    return this.http.get(this.url+path)
+  }
+  deleteData(path:string){
+    return this.http.delete(this.url+path)
   }
 }

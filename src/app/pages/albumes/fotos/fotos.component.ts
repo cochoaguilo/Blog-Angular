@@ -11,6 +11,8 @@ export class FotosComponent implements OnInit {
 
   dataFotos:any = []
 
+  
+
   constructor(private http: HttpClientService, private routeActivated: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -22,4 +24,5 @@ export class FotosComponent implements OnInit {
     })
   }
 
+  
 }

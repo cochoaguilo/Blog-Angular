@@ -1,11 +1,12 @@
-<div class="container">
-    <h1>{{dataUserbyId.name}}</h1>
+<div class="container userbyid">
+    <h1 style="font-size: 38px;">{{dataUserbyId.name}}</h1>
     <h3>User: {{dataUserbyId.username}}</h3>
-    <div>
-        Empresa:
+    <div style="border: ridge;">
+       <h2 style="text-decoration-line: underline;"> Empresa</h2>
         <br>
-        {{dataUserbyId.company.name}}
-        {{dataUserbyId.company.bs}}
+        <h3 class="dato-empresa"> Nombre:  {{dataUserbyId.company.name}} </h3>
+        <br>
+        <h3 class="dato-empresa"> Lema:  {{dataUserbyId.company.bs}} </h3>
     </div>
     <p>Website: {{dataUserbyId.website}}</p>
 </div>

@@ -1,6 +1,6 @@
-<mat-list class="container-sm">
+<mat-list class="container-sm mb-5">
     <input style="margin-bottom: 10%;" type="text" class="form-control" name="filterPost" placeholder="Buscar por titulo" [(ngModel)]="filterPost"/>
-    <mat-list-item  *ngFor="let posteo of dataPosteos | filter: filterPost">
+    <mat-list-item style="border-bottom: solid 2px lightblue;" *ngFor="let posteo of dataPosteos | filter: filterPost">
        <app-post [post]='posteo'></app-post>
  </mat-list-item>
     

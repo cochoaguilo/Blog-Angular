@@ -20,7 +20,7 @@ export class UserComponent implements OnInit {
 
   openDialog(): void {
     this.dialog.open(ModalUserComponent, {
-      width: '250px',
+      width: '70%',
       data: this.user
     });
   }

@@ -1,6 +1,7 @@
-<div class="container-sm">
-    <input type="number" name="filterById" id="filterById" [(ngModel)]="filterById">
-<mat-list *ngFor="let todo of dataTodos | filterById: filterById">
+<mat-list class="container-sm" style="margin-bottom: 15%;">
+    <input style="margin-bottom: 10%;"type="number" class="form-control" name="filterById" id="filterById" 
+    placeholder="Filtrar por id de usuario" [(ngModel)]="filterById">
+<mat-list style="border-bottom: solid 2px lightblue;" *ngFor="let todo of dataTodos | filterById: filterById">
     <app-todo [todo]="todo"></app-todo>
 </mat-list>
-</div>
+</mat-list>

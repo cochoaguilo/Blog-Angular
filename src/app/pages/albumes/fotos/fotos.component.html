@@ -1,7 +1,6 @@
 
-<div class="container position-relative" style="display: flex; flex-direction: row; flex-wrap: wrap; top: 10%;">
-<mat-card class="card" *ngFor="let foto of dataFotos">
-    <h2>{{foto.title}}</h2>
-    <img  src= {{foto.thumbnailUrl}} alt='fotos' />
+<div class="container position-relative" style="display: flex; flex-direction: row; flex-wrap: wrap; top: 10%; margin-bottom: 10%;">
+<mat-card class="card shadow-sm p-3 mb-5 bg-body rounded" *ngFor="let foto of dataFotos">
+    <app-card [foto]="foto"></app-card>
 </mat-card>
 </div>

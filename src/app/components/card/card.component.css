@@ -1,0 +1,28 @@
+.foto{
+    position: absolute;
+    left: 25%;
+    top: 45%;
+    width: auto;
+    cursor: pointer;
+    transition: transform 2s;
+}
+.foto-expandida{
+    
+   transform: scale(1.7,1.2);
+}
+.titulo{
+    position: absolute;
+    background-color: rgb(107, 91, 150) ; 
+    width: 100%; 
+    height:35%;
+    left: 0;
+    top: 0;
+    padding: 5%;
+    font-family: 'Zen Loop', cursive;
+    font-size: x-large;
+}
+.button{
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+}

@@ -1,0 +1,3 @@
+<h2 class="titulo" >{{foto.title}}</h2>
+<img  src= {{foto.thumbnailUrl}} alt='fotos' class="foto" [class.foto-expandida]="fotoExpandida" (click)="toogleFoto()"/>
+<button mat-button color="warn" class="button" (click)="deleteCard()">Delete</button>
