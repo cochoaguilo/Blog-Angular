@@ -19,8 +19,8 @@ export class ModalUserComponent {
 
   navigateTo(paths: string[]): void{
     console.log(paths);
-    
-      this.route.navigate(paths)
+    this.dialogRef.close();
+    this.route.navigate(paths);
     }
   onNoClick(): void {
     this.dialogRef.close();

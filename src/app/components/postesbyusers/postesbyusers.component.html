@@ -1,7 +1,7 @@
-<ul >
-    <li  *ngFor="let userPost of dataPosteos">
-       <h2>{{userPost.title}}</h2>
-       <p>{{userPost.body}}</p>
-    </li>
+<div class="container" style="margin-bottom: 10%; margin-top: 5%;">
+    <mat-list style="border-bottom: 2px solid lightblue;" *ngFor="let userPost of dataPosteos">
+       <h2 style="text-decoration-line: underline; font-variant-caps:all-petite-caps;">{{userPost.title}}</h2>
+       <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">{{userPost.body}}</p>
+    </mat-list>
     
-</ul>
+</div>

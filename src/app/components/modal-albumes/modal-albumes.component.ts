@@ -15,6 +15,7 @@ export class ModalAlbumesComponent {
   ) {}
 
   navigateTo(paths: string[]): void {
+    this.dialogRef.close();
     this.route.navigate(paths);
   }
   onNoClick(): void {
